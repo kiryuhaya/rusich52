@@ -147,7 +147,7 @@
       const ADMIN_PASSWORD = 'admin123';
 
       React.useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://rusich52.onrender.com/categories')
           .then(res => res.json())
           .then(data => setCategories(data))
           .catch(err => console.error(err));
@@ -181,7 +181,7 @@
         formData.append('image', productForm.image);
 
         try {
-          const response = await fetch('http://localhost:5000/add-product', {
+          const response = await fetch('https://rusich52.onrender.com/add-product', {
             method: 'POST',
             body: formData
           });
@@ -201,7 +201,7 @@
         e.preventDefault();
         try {
           console.log('Отправка категории:', { name: categoryName });
-          const response = await fetch('http://localhost:5000/add-category', {
+          const response = await fetch('https://rusich52.onrender.com/add-category', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: categoryName })
@@ -214,7 +214,7 @@
           if (result.status === 'success') {
             alert('Категория добавлена!');
             setCategoryName('');
-            fetch('http://localhost:5000/categories')
+            fetch('https://rusich52.onrender.com/categories')
               .then(res => {
                 if (!res.ok) throw new Error(`Ошибка загрузки категорий: ${res.status}`);
                 return res.json();
