@@ -15,6 +15,7 @@ CHAT_ID = '5516410719'
 CORS_ORIGINS = [
     "http://localhost:5000",
     "http://127.0.0.1:5000",
+    "http://localhost:3000"
     "https://rusich52.onrender.com"
     "https://detectorofai.ru" #надо изменить, нужно для тестов
 ]
