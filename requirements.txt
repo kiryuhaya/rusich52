@@ -1,4 +1,5 @@
 flask
+hypercorn 
 python-telegram-bot
 werkzeug
 flask-cors
