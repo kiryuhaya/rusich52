@@ -206,7 +206,7 @@
       const [currentIndex, setCurrentIndex] = React.useState(0);
 
       React.useEffect(() => {
-        fetch('http://localhost:5000/products-data')
+        fetch('https://rusich52.onrender.com/products-data')
           .then(res => res.json())
           .then(data => setProducts(data.slice(0, 3)))
           .catch(console.error);
@@ -295,7 +295,7 @@
       const [categories, setCategories] = React.useState([]);
 
       React.useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://rusich52.onrender.com/categories')
           .then(res => res.json())
           .then(setCategories)
           .catch(console.error);
@@ -331,7 +331,7 @@
           return;
         }
 
-        fetch('http://localhost:5000/products-data')
+        fetch('https://rusich52.onrender.com/products-data')
           .then(res => res.json())
           .then(data => setProducts(data.filter(p => p.category_id === selectedCategory)))
           .catch(console.error);
